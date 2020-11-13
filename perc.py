@@ -1,15 +1,17 @@
+# INSTITUTO TECNOLOGICO DE MEXICO EN CELAYA
+# AUTOR : JOSE MANUEL SOTELO PACHECO
 import numpy as np
 import math
 binario = [11.1100101010 , 01.1000111010 , 00.0001111010 , 10.0101110000,10.0000111010]
-a = []
 decimal =[] 
-count1 = 0
-count2 = -1
+
 
 def Bin(z):
-	global count1,count2
+	
 	suma = 0
 	suma2 = 0
+	count1 = 0
+	count2 = -1
 	after_point = []
 	later_point = []
 	numbers = str(z)
