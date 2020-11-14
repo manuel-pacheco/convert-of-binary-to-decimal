@@ -13,7 +13,7 @@ def Bin(z):
 	count1 = 0
 	count2 = -1
 	after_point = []
-	later_point = []
+	before_point = []
 	numbers = str(z)
 	for x in range(len(numbers)):
 		if(numbers[x] == "1" or numbers[x] == "0"):
@@ -22,7 +22,7 @@ def Bin(z):
 				after_point.append(int(numbers[x]))
 				count1+=1
 			else:
-				later_point.append(int(numbers[x]))
+				before_point.append(int(numbers[x]))
 				count2 +=1
 		else:
 			count2 = 0
@@ -31,21 +31,21 @@ def Bin(z):
 		suma += after_point[y]*pow(2,count1-1)
 		count1 -=1
 
-	for mamalon in range(len(later_point)):
-		if(later_point[mamalon] != 0):
-			suma2 += 1/(later_point[mamalon]*pow(2,mamalon + 1))
+	for mamalon in range(len(before_point)):
+		if(before_point[mamalon] != 0):
+			suma2 += 1/(before_point[mamalon]*pow(2,mamalon + 1))
 		'''print("#########################################")
 	print(count1)
 	print(count2)
 	print(after_point)
-	print(later_point)
+	print(before_point)
 	print(suma2 + suma)'''
 	#Reset
 	#print("#########################################")
 	count1 = 0
 	count2 = -1
 	np.delete(after_point,0,0)
-	np.delete(later_point,0,0)
+	np.delete(before_point,0,0)
 	return (suma + suma2)
 
 
